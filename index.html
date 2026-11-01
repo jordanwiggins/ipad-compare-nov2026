@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iPad price &amp; longevity comparison — Nov 2026 (budget first)</title>
+<meta name="description" content="Wi-Fi only iPad comparison for Jordan: budget refurbished M1/M2 Air and Pro, A16 sales, Apple Refurbished, vs current Air M4 and Pro M5. Checked Nov 1, 2026 America/Los_Angeles.">
+<style>
+:root {
+  --bg: #0f1419;
+  --surface: #1a222c;
+  --surface2: #243040;
+  --text: #e8eef4;
+  --muted: #9aabbc;
+  --accent: #3dd68c;
+  --warn: #f5a524;
+  --danger: #f04438;
+  --link: #6cb6ff;
+  --border: #2e3d4d;
+  --radius: 12px;
+  --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  font-size: 16px;
+}
+a { color: var(--link); }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+header {
+  padding: 1.5rem 0 1rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+header h1 { margin: 0 0 0.4rem; font-size: clamp(1.4rem, 4vw, 1.9rem); letter-spacing: -0.02em; }
+header .meta { color: var(--muted); font-size: 0.95rem; }
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--surface2);
+  color: var(--accent);
+  vertical-align: middle;
+  margin-left: 0.35rem;
+}
+nav.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+}
+nav.toc a {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+nav.toc a:hover { border-color: var(--link); color: var(--link); }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  margin: 1rem 0;
+}
+.card.success { border-color: #2a6b4a; background: #13251c; }
+.card.warn { border-color: #7a5a1a; background: #241c0e; }
+.card h2, section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+.lead { font-weight: 600; color: var(--accent); margin-bottom: 0.35rem; }
+.muted { color: var(--muted); font-size: 0.9rem; }
+.picks { display: grid; gap: 0.75rem; margin: 1rem 0; }
+@media (min-width: 700px) { .picks { grid-template-columns: repeat(3, 1fr); } }
+.pick {
+  background: var(--surface2);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+}
+.pick strong { display: block; margin-bottom: 0.25rem; }
+.pick .price { font-size: 1.35rem; font-weight: 700; color: var(--accent); margin: 0.35rem 0; }
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.75rem 0;
+}
+.controls label { color: var(--muted); font-size: 0.85rem; margin-right: 0.25rem; }
+.controls select, .controls button {
+  background: var(--surface2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.65rem;
+  font: inherit;
+  cursor: pointer;
+}
+.controls button.active { border-color: var(--accent); color: var(--accent); }
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 0.75rem 0 1.25rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  min-width: 900px;
+}
+th, td {
+  padding: 0.55rem 0.65rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th {
+  background: var(--surface2);
+  position: sticky;
+  top: 0;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+th:hover { color: var(--link); }
+th .arrow { opacity: 0.4; font-size: 0.75rem; }
+th.sorted .arrow { opacity: 1; color: var(--accent); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.yes { color: var(--accent); font-weight: 600; }
+.no { color: var(--warn); font-weight: 600; }
+ul.plain { padding-left: 1.2rem; }
+ul.plain li { margin: 0.35rem 0; }
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.note { font-size: 0.85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>iPad price &amp; longevity comparison <span class="badge">Wi‑Fi only · no mini</span></h1>
+  <p class="meta">For Jordan (US, Pacific). Goal: cheapest options that won’t age out soon — Apple Intelligence (M1+) is the key longevity marker. Prices checked <strong>Sunday Nov 1, 2026, America/Los_Angeles</strong>. Nothing was added to a cart.</p>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <a href="#budget-verdict">Budget verdict</a>
+  <a href="#budget-table">Budget table</a>
+  <a href="#full-table">Full comparison</a>
+  <a href="#tiers">Performance tiers</a>
+  <a href="#caveats">Caveats</a>
+  <a href="#sources">Sources</a>
+</nav>
+
+<section id="budget-verdict">
+  <div class="card success">
+    <div class="lead">Budget verdict (sub‑$550, Wi‑Fi)</div>
+    <p><strong>Cheapest thing still safe for longevity:</strong> a refurbished <strong>iPad Air (5th gen, M1)</strong> with <strong>8 GB RAM</strong> and Apple Intelligence — around <strong>$320–$360</strong> from Plug, Back Market, or Best Buy refurbished. Prefer <strong>256 GB</strong> when you can stretch; 64 GB fills fast.</p>
+    <p style="margin-bottom:0"><strong>Best budget balance:</strong> Back Market / third‑party <strong>Air M2 11″ 128GB</strong> from about <strong>$480–$490</strong> (newer chip, Pencil Pro path) if stock looks good — or stretch to Apple Certified Refurb <strong>Air M3 11″ 128GB at $589</strong> for warranty parity. Skip the A16 as a long‑term buy (6 GB, <em>no</em> Apple Intelligence) unless you only need a cheap secondary tablet.</p>
+  </div>
+  <div class="picks">
+    <div class="pick">
+      <strong>1. Plug — Air M1 64GB Wi‑Fi</strong>
+      <div class="price">$319.99</div>
+      <div class="muted">Refurb “Good” · 8 GB · AI yes · 12‑mo warranty · 30‑day returns</div>
+      <p><a href="https://www.plug.tech/products/ipad-air-5-64gb-space-gray-wifi-only" target="_blank" rel="noopener">Buy / product page →</a></p>
+    </div>
+    <div class="pick">
+      <strong>2. Back Market — Air M1 from</strong>
+      <div class="price">$327+</div>
+      <div class="muted">Refurb · 8 GB · AI yes · 1‑yr warranty · 30‑day returns · grades Fair–Premium</div>
+      <p><a href="https://www.backmarket.com/en-us/l/apple-ipad-air/ff63f59b-a54d-445b-8d34-d5457e66f5d1" target="_blank" rel="noopener">Browse Air listings →</a></p>
+    </div>
+    <div class="pick">
+      <strong>3. Best Buy — Air M1 64GB Excellent</strong>
+      <div class="price">$360</div>
+      <div class="muted">Refurbished Excellent · 8 GB · AI yes · retailer warranty on page</div>
+      <p><a href="https://www.bestbuy.com/product/apple-10-9-inch-ipad-air-5th-generation-m1-chip-wi-fi-64gb-space-gray/JJ8ZH924LW/sku/13172913" target="_blank" rel="noopener">Buy / product page →</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="budget-table">
+  <h2>Budget picks ($250–$550 band)</h2>
+  <p class="note">Sorted by price ascending by default. Click a column header to re-sort. Every price links to its product or category page. Wi‑Fi only.</p>
+  <div class="controls">
+    <label for="budget-filter">Show</label>
+    <select id="budget-filter">
+      <option value="all">All budget rows</option>
+      <option value="ai">Apple Intelligence only</option>
+      <option value="refurb">Refurbished only</option>
+      <option value="new">New / sale only</option>
+    </select>
+  </div>
+  <div class="table-wrap">
+    <table id="budget" data-sort-col="6" data-sort-dir="asc">
+      <thead>
+        <tr>
+          <th data-col="0">Model <span class="arrow">↕</span></th>
+          <th data-col="1">Chip <span class="arrow">↕</span></th>
+          <th data-col="2" class="num">RAM <span class="arrow">↕</span></th>
+          <th data-col="3" class="num">Storage <span class="arrow">↕</span></th>
+          <th data-col="4">Condition <span class="arrow">↕</span></th>
+          <th data-col="5">Seller <span class="arrow">↕</span></th>
+          <th data-col="6" class="num">Price <span class="arrow">↕</span></th>
+          <th data-col="7">Warranty <span class="arrow">↕</span></th>
+          <th data-col="8">AI <span class="arrow">↕</span></th>
+          <th data-col="9">Est. support <span class="arrow">↕</span></th>
+          <th data-col="10">Checked <span class="arrow">↕</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-ai="yes" data-cond="refurb" data-price="306">
+          <td>iPad Air 10.9″ (M1, 5th gen)</td>
+          <td>M1</td>
+          <td class="num">8 GB</td>
+          <td class="num">64 GB</td>
+          <td>Certified used</td>
+          <td>UpTrade</td>
+          <td class="num"><a href="https://uptradeit.com/buy-used-refurbished-ipad-air-5th-gen-2022-m1-64gb-purple" target="_blank" rel="noopener">$306</a></td>
+          <td>Seller terms (confirm)</td>
+          <td class="yes">Yes</td>
+          <td>~3–4 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr data-ai="yes" data-cond="refurb" data-price="319.99">
+          <td>iPad Air 10.9″ (M1, 5th gen)</td>
+          <td>M1</td>
+          <td class="num">8 GB</td>
+          <td class="num">64 GB</td>
+          <td>Refurb Good</td>
+          <td>Plug</td>
+          <td class="num"><a href="https://www.plug.tech/products/ipad-air-5-64gb-space-gray-wifi-only" target="_blank" rel="noopener">$319.99</a></td>
+          <td>12‑mo Plug + 30‑day return</td>
+          <td class="yes">Yes</td>
+          <td>~3–4 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr data-ai="yes" data-cond="refurb" data-price="327">
+          <td>iPad Air 10.9″ (M1, 5th gen)</td>
+          <td>M1</td>
+          <td class="num">8 GB</td>
+          <td class="num">64 GB+</td>
+          <td>Refurb (from)</td>
+          <td>Back Market</td>
+          <td class="num"><a href="https://www.backmarket.com/en-us/l/apple-ipad-air/ff63f59b-a54d-445b-8d34-d5457e66f5d1" target="_blank" rel="noopener">from $327</a></td>
+          <td>1‑yr + 30‑day return</td>
+          <td class="yes">Yes</td>
+          <td>~3–4 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr data-ai="yes" data-cond="refurb" data-price="360">
+          <td>iPad Air 10.9″ (M1, 5th gen)</td>
+          <td>M1</td>
+          <td class="num">8 GB</td>
+          <td class="num">64 GB</td>
+          <td>Refurbished Excellent</td>
+          <td>Best Buy</td>
+          <td class="num"><a href="https://www.bestbuy.com/product/apple-10-9-inch-ipad-air-5th-generation-m1-chip-wi-fi-64gb-space-gray/JJ8ZH924LW/sku/13172913" target="_blank" rel="noopener">$360</a></td>
+          <td>Best Buy refurbished warranty</td>
+          <td class="yes">Yes</td>
+          <td>~3–4 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr data-ai="yes" data-cond="refurb" data-price="359.99">
+          <td>iPad Air 10.9″ (M1, 5th gen)</td>
+          <td>M1</td>
+          <td class="num">8 GB</td>
+          <td class="num">64 GB</td>
+          <td>Refurbished Excellent</td>
+          <td>ItsWorthMore</td>
+          <td class="num"><a href="https://buy.itsworthmore.com/products/ipad-air-5th-gen-64gb-wifi-blue" target="_blank" rel="noopener">$359.99</a></td>
+          <td>Seller warranty (confirm)</td>
+          <td class="yes">Yes</td>
+          <td>~3–4 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr data-ai="no" data-cond="new" data-price="399">
+          <td>iPad 11″ (A16)</td>
+          <td>A16</td>
+          <td class="num">6 GB</td>
+          <td class="num">128 GB</td>
+          <td>New (sale)</td>
+          <td>Best Buy</td>
+          <td class="num"><a href="https://www.bestbuy.com/product/apple-11-inch-ipad-a16-chip-with-wi-fi-128gb-silver/JJGCQG39VG/sku/6578266" target="_blank" rel="noopener">$399</a></td>
+          <td>1‑year Apple</td>
+          <td class="no">No</td>
+          <td>~5–6 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr data-ai="no" data-cond="refurb" data-price="380">
+          <td>iPad 11″ (A16)</td>
+          <td>A16</td>
+          <td class="num">6 GB</td>
+          <td class="num">128 GB</td>
+          <td>Refurb (from)</td>
+          <td>Back Market</td>
+          <td class="num"><a href="https://www.backmarket.com/en-us/search?q=iPad%20A16" target="_blank" rel="noopener">from ~$380</a></td>
+          <td>1‑yr + 30‑day return</td>
+          <td class="no">No</td>
+          <td>~5–6 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr data-ai="no" data-cond="new" data-price="427">
+          <td>iPad 11″ (A16)</td>
+          <td>A16</td>
+          <td class="num">6 GB</td>
+          <td class="num">128 GB</td>
+          <td>New</td>
+          <td>Abt</td>
+          <td class="num"><a href="https://www.abt.com/Apple-iPad-11th-Generation-11-Inch-128GB-Wi-Fi-in-Silver-MD3Y4LLA/p/219019.html" target="_blank" rel="noopener">$427</a></td>
+          <td>1‑year Apple</td>
+          <td class="no">No</td>
+          <td>~5–6 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr data-ai="yes" data-cond="refurb" data-price="479.95">
+          <td>iPad Air 11″ (M2, 6th gen)</td>
+          <td>M2</td>
+          <td class="num">8 GB</td>
+          <td class="num">128 GB</td>
+          <td>Refurb Fair</td>
+          <td>BuyBackWorld</td>
+          <td class="num"><a href="https://www.buybackworldstore.com/products/ipad-air-11-m2-128gb-starlight-wifi" target="_blank" rel="noopener">$479.95</a></td>
+          <td>Seller terms (confirm)</td>
+          <td class="yes">Yes</td>
+          <td>~4–5 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr data-ai="yes" data-cond="refurb" data-price="489.95">
+          <td>iPad Air 11″ (M2, 6th gen)</td>
+          <td>M2</td>
+          <td class="num">8 GB</td>
+          <td class="num">128 GB</td>
+          <td>Refurb (from)</td>
+          <td>Back Market</td>
+          <td class="num"><a href="https://www.backmarket.com/en-us/l/apple-ipad-air/ff63f59b-a54d-445b-8d34-d5457e66f5d1" target="_blank" rel="noopener">from $489.95</a></td>
+          <td>1‑yr + 30‑day return</td>
+          <td class="yes">Yes</td>
+          <td>~4–5 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr data-ai="yes" data-cond="refurb" data-price="534">
+          <td>iPad Air 11″ (M3)</td>
+          <td>M3</td>
+          <td class="num">8 GB</td>
+          <td class="num">128 GB+</td>
+          <td>Refurb (from)</td>
+          <td>Back Market</td>
+          <td class="num"><a href="https://www.backmarket.com/en-us/l/apple-ipad-air/ff63f59b-a54d-445b-8d34-d5457e66f5d1" target="_blank" rel="noopener">from $534</a></td>
+          <td>1‑yr + 30‑day return</td>
+          <td class="yes">Yes</td>
+          <td>~5–6 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr data-ai="yes" data-cond="refurb" data-price="589">
+          <td>iPad Air 11″ (M3)</td>
+          <td>M3</td>
+          <td class="num">8 GB</td>
+          <td class="num">128 GB</td>
+          <td>Apple Certified Refurb</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/product/fc9w4ll/a/Refurbished-11-inch-iPad-Air-M3-Wi-Fi-128GB-Space-Gray" target="_blank" rel="noopener">$589</a></td>
+          <td>1‑yr Apple + 14‑day return</td>
+          <td class="yes">Yes</td>
+          <td>~5–6 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card warn">
+    <div class="lead">Not in Apple Refurbished today</div>
+    <p style="margin:0">Apple’s refurbished catalog (checked Nov 1, 2026) lists Air M3 from $589, Air M2 high‑storage from $709, Pro M2 from $709, Pro M4 from $909 — <strong>no A16 base iPad</strong> and <strong>no low‑storage Air M1/M2</strong> on apple.com/shop/refurbished/ipad. Amazon Renewed Premium for these SKUs was not cleanly verified this pass. Walmart Restored / marketplace listings for older Pros often mix cellular and older A12Z gens — verify Wi‑Fi M1/M2 before buying.</p>
+  </div>
+</section>
+
+<section id="full-table">
+  <h2>Full comparison (new + refurb mid/high)</h2>
+  <p class="note">Current lineup and higher‑storage Apple Refurb / retailer options. Click headers to sort.</p>
+  <div class="table-wrap">
+    <table id="full" data-sort-col="6" data-sort-dir="asc">
+      <thead>
+        <tr>
+          <th data-col="0">Model <span class="arrow">↕</span></th>
+          <th data-col="1">Chip <span class="arrow">↕</span></th>
+          <th data-col="2" class="num">RAM <span class="arrow">↕</span></th>
+          <th data-col="3" class="num">Storage <span class="arrow">↕</span></th>
+          <th data-col="4">Condition <span class="arrow">↕</span></th>
+          <th data-col="5">Seller <span class="arrow">↕</span></th>
+          <th data-col="6" class="num">Price <span class="arrow">↕</span></th>
+          <th data-col="7">Warranty <span class="arrow">↕</span></th>
+          <th data-col="8">AI <span class="arrow">↕</span></th>
+          <th data-col="9">Est. support <span class="arrow">↕</span></th>
+          <th data-col="10">Checked <span class="arrow">↕</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>iPad 11″ (A16)</td>
+          <td>A16</td>
+          <td class="num">6 GB</td>
+          <td class="num">128 GB</td>
+          <td>New</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/buy-ipad/ipad" target="_blank" rel="noopener">$449</a></td>
+          <td>1‑year Apple</td>
+          <td class="no">No</td>
+          <td>~5–6 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr>
+          <td>iPad Air 11″ (M4)</td>
+          <td>M4</td>
+          <td class="num">12 GB</td>
+          <td class="num">128 GB</td>
+          <td>New</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/buy-ipad/ipad-air" target="_blank" rel="noopener">$749</a></td>
+          <td>1‑year Apple</td>
+          <td class="yes">Yes</td>
+          <td>~6–7 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr>
+          <td>iPad Air 13″ (M4)</td>
+          <td>M4</td>
+          <td class="num">12 GB</td>
+          <td class="num">128 GB</td>
+          <td>New</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/buy-ipad/ipad-air" target="_blank" rel="noopener">$949</a></td>
+          <td>1‑year Apple</td>
+          <td class="yes">Yes</td>
+          <td>~6–7 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr>
+          <td>iPad Pro 11″ (M5)</td>
+          <td>M5</td>
+          <td class="num">12 GB</td>
+          <td class="num">256 GB</td>
+          <td>New</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/buy-ipad/ipad-pro" target="_blank" rel="noopener">$1,199</a></td>
+          <td>1‑year Apple</td>
+          <td class="yes">Yes</td>
+          <td>~6–7 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr>
+          <td>iPad Pro 13″ (M5)</td>
+          <td>M5</td>
+          <td class="num">12 GB</td>
+          <td class="num">256 GB</td>
+          <td>New</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/buy-ipad/ipad-pro" target="_blank" rel="noopener">$1,499</a></td>
+          <td>1‑year Apple</td>
+          <td class="yes">Yes</td>
+          <td>~6–7 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr>
+          <td>iPad Air 11″ (M3)</td>
+          <td>M3</td>
+          <td class="num">8 GB</td>
+          <td class="num">128 GB</td>
+          <td>Apple Certified Refurb</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/product/fc9w4ll/a/Refurbished-11-inch-iPad-Air-M3-Wi-Fi-128GB-Space-Gray" target="_blank" rel="noopener">$589</a></td>
+          <td>1‑yr Apple + 14‑day</td>
+          <td class="yes">Yes</td>
+          <td>~5–6 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr>
+          <td>iPad Air 11″ (M3)</td>
+          <td>M3</td>
+          <td class="num">8 GB</td>
+          <td class="num">256 GB</td>
+          <td>Apple Certified Refurb</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/refurbished/ipad" target="_blank" rel="noopener">$669</a></td>
+          <td>1‑yr Apple + 14‑day</td>
+          <td class="yes">Yes</td>
+          <td>~5–6 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr>
+          <td>iPad Pro 11″ (M2, 4th gen)</td>
+          <td>M2</td>
+          <td class="num">8 GB</td>
+          <td class="num">128 GB</td>
+          <td>Apple Certified Refurb</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/product/fnxe3ll/a/Refurbished-11-inch-iPad-Pro-Wi-Fi-128GB-Silver-4th-Generation" target="_blank" rel="noopener">$709</a></td>
+          <td>1‑yr Apple + 14‑day</td>
+          <td class="yes">Yes</td>
+          <td>~3–4 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr>
+          <td>iPad Air 11″ (M2)</td>
+          <td>M2</td>
+          <td class="num">8 GB</td>
+          <td class="num">512 GB</td>
+          <td>Apple Certified Refurb</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/refurbished/ipad" target="_blank" rel="noopener">$709</a></td>
+          <td>1‑yr Apple + 14‑day</td>
+          <td class="yes">Yes</td>
+          <td>~4–5 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr>
+          <td>iPad Pro 11″ (M2, 4th gen)</td>
+          <td>M2</td>
+          <td class="num">8 GB</td>
+          <td class="num">256 GB</td>
+          <td>Apple Certified Refurb</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/refurbished/ipad" target="_blank" rel="noopener">$789</a></td>
+          <td>1‑yr Apple + 14‑day</td>
+          <td class="yes">Yes</td>
+          <td>~3–4 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+        <tr>
+          <td>iPad Pro 11″ (M4)</td>
+          <td>M4</td>
+          <td class="num">8 GB</td>
+          <td class="num">256 GB</td>
+          <td>Apple Certified Refurb</td>
+          <td>Apple</td>
+          <td class="num"><a href="https://www.apple.com/shop/product/fvv93ll/a/Refurbished-iPad-Pro-11%E2%80%91inch-M4-Wi-Fi-256GB-with-Standard-glass-Silver" target="_blank" rel="noopener">$909</a></td>
+          <td>1‑yr Apple + 14‑day</td>
+          <td class="yes">Yes</td>
+          <td>~4–5 yrs est.</td>
+          <td>Nov 1, 2026 PT</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="tiers">
+  <h2>Performance tiers (plain English)</h2>
+  <ul class="plain">
+    <li><strong>Pro M5 / M4:</strong> OLED + 120Hz. Fastest chips and best display. M5 new starts $1,199; M4 Apple Refurb 11″ 256GB $909.</li>
+    <li><strong>Air M4 (current):</strong> 12 GB RAM, newest Air chip, $749 new — longevity sweet spot if budget stretches.</li>
+    <li><strong>Air M3:</strong> Almost as fast as M4 for everyday use; Apple Refurb $589 / Back Market from ~$534.</li>
+    <li><strong>Air M2 / Pro M2:</strong> Still Apple Intelligence; good if priced under ~$500 refurbished. Shorter remaining support than M3/M4.</li>
+    <li><strong>Air M1 (5th gen):</strong> Cheapest AI‑capable Air (~$320–$360). 8 GB RAM. Best “won’t age out soon” floor for this budget. 64 GB is the common cheap config — plan iCloud or pick 256 GB when you can.</li>
+    <li><strong>Base A16:</strong> New ~$399–$449. Fine for media/notes. <strong>No Apple Intelligence</strong>, 6 GB RAM — not the longevity pick for this brief.</li>
+  </ul>
+</section>
+
+<section id="caveats">
+  <h2>Caveats</h2>
+  <ul class="plain">
+    <li>Wi‑Fi only; cellular adds roughly $150–$200.</li>
+    <li>Support years are planning estimates from typical iPadOS windows — not an Apple promise.</li>
+    <li>Prefer Apple Certified Refurbished when the price gap is small; otherwise Plug / Back Market / Best Buy refurbished with clear warranty.</li>
+    <li>Ignore suspiciously cheap Shopify listings (~$50) — treated as unreliable.</li>
+    <li>Costco/Target/Walmart A16 or Air street stock was incomplete online when checked; Costco A16 128GB unavailable online.</li>
+    <li>Re‑open every link before buying — refurbished stock turns over fast.</li>
+  </ul>
+</section>
+
+<section id="sources">
+  <h2>Sources</h2>
+  <ul class="plain">
+    <li><a href="https://www.apple.com/shop/refurbished/ipad" target="_blank" rel="noopener">Apple refurbished iPad catalog</a></li>
+    <li><a href="https://support.apple.com/en-us/121115" target="_blank" rel="noopener">Apple Intelligence supported models</a> (updated Oct 22, 2026)</li>
+    <li>Best Buy, Plug, Back Market, Abt, UpTrade, ItsWorthMore, BuyBackWorld product pages — Nov 1, 2026</li>
+  </ul>
+</section>
+
+<footer>
+  Built Nov 1, 2026 for personal comparison. Not affiliated with Apple or the retailers listed. Prices change; verify on the linked page.
+</footer>
+</div>
+<script>
+(function () {
+  function parsePrice(td) {
+    var t = (td.textContent || "").replace(/[^0-9.]/g, "");
+    var n = parseFloat(t);
+    return isNaN(n) ? 0 : n;
+  }
+  function sortTable(table, col, dir) {
+    var tbody = table.tBodies[0];
+    var rows = Array.prototype.slice.call(tbody.rows);
+    rows.sort(function (a, b) {
+      var A = a.cells[col], B = b.cells[col];
+      var av, bv;
+      if (col === 6) { av = parsePrice(A); bv = parsePrice(B); }
+      else {
+        av = (A.textContent || "").trim().toLowerCase();
+        bv = (B.textContent || "").trim().toLowerCase();
+      }
+      if (av < bv) return dir === "asc" ? -1 : 1;
+      if (av > bv) return dir === "asc" ? 1 : -1;
+      return 0;
+    });
+    rows.forEach(function (r) { tbody.appendChild(r); });
+    table.querySelectorAll("th").forEach(function (th) { th.classList.remove("sorted"); });
+    var th = table.querySelector('th[data-col="' + col + '"]');
+    if (th) th.classList.add("sorted");
+    table.dataset.sortCol = String(col);
+    table.dataset.sortDir = dir;
+  }
+  document.querySelectorAll("table").forEach(function (table) {
+    table.querySelectorAll("th[data-col]").forEach(function (th) {
+      th.addEventListener("click", function () {
+        var col = parseInt(th.getAttribute("data-col"), 10);
+        var cur = parseInt(table.dataset.sortCol || "-1", 10);
+        var dir = table.dataset.sortDir || "asc";
+        if (cur === col) dir = dir === "asc" ? "desc" : "asc";
+        else dir = col === 6 ? "asc" : "asc";
+        sortTable(table, col, dir);
+      });
+    });
+    var c = parseInt(table.dataset.sortCol || "6", 10);
+    var d = table.dataset.sortDir || "asc";
+    sortTable(table, c, d);
+  });
+  var filt = document.getElementById("budget-filter");
+  if (filt) {
+    filt.addEventListener("change", function () {
+      var v = filt.value;
+      document.querySelectorAll("#budget tbody tr").forEach(function (tr) {
+        var ai = tr.getAttribute("data-ai");
+        var cond = tr.getAttribute("data-cond");
+        var show = true;
+        if (v === "ai") show = ai === "yes";
+        else if (v === "refurb") show = cond === "refurb";
+        else if (v === "new") show = cond === "new";
+        tr.style.display = show ? "" : "none";
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
